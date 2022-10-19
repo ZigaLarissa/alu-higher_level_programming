@@ -1,4 +1,4 @@
 #!/bin/bash
 export $PYFILE=main.py
-echo "Compiling $PYFILE ..."
+echo "Compiling main.py ..."
 python3 -c $PYFILE
