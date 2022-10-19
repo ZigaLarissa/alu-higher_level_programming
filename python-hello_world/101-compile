@@ -1,4 +1,3 @@
 #!/bin/bash
-export PYFILE=main.py
-echo "Compiling $PYFILE ..."
-python3 -c $PYFILE
+import py_compile
+py_compile.compile($PYFILE)
