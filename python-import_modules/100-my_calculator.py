@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
     import sys
-    i = len(sys.argv) -1
+    i = len(sys.argv) - 1
     if i != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         sys.exit(1)
@@ -13,8 +13,7 @@ if __name__ == "__main__":
 
     from calculator_1 import add, sub, mul, div
     a = int(sys.argv[1])
-    b = int(sys.argv[3])
-    
+    b = int(sys.argv[3]) 
     if sign == '+':
         print("{} + {} = {}".format(a, b, add(a, b)))
     elif sign == '-':
