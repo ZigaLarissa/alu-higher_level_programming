@@ -6,11 +6,10 @@ Rectangle = __import__('9-rectangle').Rectangle
 class Square(Rectangle):
     """Initialize the subclass"""
     def __init__(self, size):
-        """initialize the parent class"""
-        super().__init__(size, size)
         """call the integer validator method"""
         self.integer_validator("size", size)
-        """Add a new private attribute size"""
+        """call the parent class methods and attributes"""
+        super().__init__(size, size)
         self.__size = size
 
     """Create the user string represantation"""
