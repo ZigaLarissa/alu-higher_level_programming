@@ -12,8 +12,8 @@ class Student:
     """Method that retries the attributes dic"""
     def to_json(self, attrs=None):
         dic = self.__dict__
-        
-        if attrs == None and type(attrs) != list:
+
+        if attrs is None and type(attrs) != list:
             return(dic)
 
         else:
