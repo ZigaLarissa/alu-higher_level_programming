@@ -1,13 +1,17 @@
 #!/usr/bin/python3
 def pascal_triangle(n):
+    """Fucntion that provideds a list of pascal number lists."""
+
 
     if n <= 0:
         return([])
     
     else:
         my_list = []
+        """number of rows"""
         
         for i in range(n):
+            """number of columns"""
             temp_list = []
             
             for j in range(i+1):
