@@ -11,7 +11,7 @@ def pascal_triangle(n):
     else:
         my_list = []
         """number of rows"""
-    
+
         for i in range(n):
             """number of columns"""
             temp_list = []
@@ -21,6 +21,6 @@ def pascal_triangle(n):
                 if j == 0 or j == i:
                     temp_list.append(1)
                 else:
-                    temp_list.append(my_list[i-1][j-1]  +  my_list[i-1][j])
+                    temp_list.append(my_list[i-1][j-1] + my_list[i-1][j])
             my_list.append(temp_list)
         return(my_list)
