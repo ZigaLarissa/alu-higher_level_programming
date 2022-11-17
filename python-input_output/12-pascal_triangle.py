@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Fucntion that provideds a list of pascal number lists."""
+
+
 def pascal_triangle(n):
     """Fucntion that provideds a list of pascal number lists."""
 
