@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-magic_string = __import__('100-magic_string').magic_string
+MyInt = __import__('100-my_int').MyInt
 
-for i in range(10):
-    print(magic_string())
-
+my_i = MyInt(3)
+print(my_i)
+print(my_i == 3)
+print(my_i != 3)
