@@ -9,6 +9,8 @@ all row of the matrix must be the same size."""
 
 
 def matrix_divided(matrix, div):
+    """divide a matrix"""
+
     if not isinstance(matrix, (list,)):
         raise TypeError("matrix must be a matrix "
                         "(list of lists) of integers/floats")
