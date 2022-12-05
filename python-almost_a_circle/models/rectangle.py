@@ -96,7 +96,7 @@ class Rectangle(Base):
     def display(self):
         """Return the rectangle made from #."""
 
-        for i in range(self.height):
-            for j in range(self.width):
+        for i in range(self.__height):
+            for j in range(self.__width):
                 print("#", end='')
             print(" \n", end='')
