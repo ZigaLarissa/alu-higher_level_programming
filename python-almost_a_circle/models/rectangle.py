@@ -91,19 +91,32 @@ class Rectangle(Base):
     def area(self):
         """calc the area of a rectangle."""
 
-        return self.__width * self.__height
+        return self.width * self.height
 
     def display(self):
         """Return the rectangle made from #."""
 
-        for i in range(self.__y):
+        for i in range(self.y):
             print()
 
-        for i in range(self.__height):
-            print(" " * self.__x + "#" * self.__width)
+        for i in range(self.height):
+            print(" " * self.x + "#" * self.width)
 
     def __str__(self):
         """returns a readable representation."""
 
         return "[Rectangle] ({}) {}/{} - {}/{}" \
             .format(self.id, self.x, self.y, self.width, self.height)
+
+    def update(self, *args):
+        """Assign an argument to each attr."""
+        
+        if len(args) != 0:
+            try:
+                self.id = args[0]
+                self.width = args[1]
+                self.height = args[2]
+                self.x = args[3]
+                self.y = args[4]
+            except IndexError:
+                pass
