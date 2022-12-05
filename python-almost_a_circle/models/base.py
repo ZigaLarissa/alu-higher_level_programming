@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """Create a new class."""
 
-import json
-
 
 class Base:
     """A class with a private class attribute."""
