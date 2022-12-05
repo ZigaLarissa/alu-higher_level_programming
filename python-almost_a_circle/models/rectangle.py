@@ -109,8 +109,7 @@ class Rectangle(Base):
             .format(self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args):
-        """Assign an argument to each attr."""
- 
+        """Assign an argument to each attr."""        
         if len(args) != 0:
             try:
                 self.id = args[0]
