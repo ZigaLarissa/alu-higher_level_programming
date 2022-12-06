@@ -50,7 +50,7 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """Returns an instance with all attr already set.by creating a dummy."""
+        """Returns instance with all attr already set.by creating a dummy."""
 
         if cls.__name__ == "Square":
             dummy = cls(4)
