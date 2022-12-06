@@ -19,7 +19,6 @@ if __name__ == "__main__":
             FROM cities, states WHERE cities.state_id = states.id \
             ORDER BY id ASC")
 
-
     result = my_cursor.fetchall()
 
     for i in result:
