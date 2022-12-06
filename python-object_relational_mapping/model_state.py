@@ -9,8 +9,10 @@ from sqlalchemy.ext.declarative import declarative_base
 """Create a new base class from which all mapped classes should inherit."""
 Base = declarative_base()
 
+
 """create a mapped class."""
 class States(Base):
+    """A class defining a Table in sql."""
     __tablename__ = "states"
 
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=True)
