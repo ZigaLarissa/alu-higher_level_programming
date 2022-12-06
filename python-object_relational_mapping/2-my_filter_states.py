@@ -18,7 +18,6 @@ if __name__ == "__main__":
     sql = """SELECT * FROM states \
             WHERE  name LIKE BINARY '{}' \
             ORDER BY id ASC""".format(sys.argv[4])
-    
 
     my_cursor.execute(sql)
     result = my_cursor.fetchall()
