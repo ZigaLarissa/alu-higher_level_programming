@@ -70,8 +70,6 @@ class Base:
                 handle = my_file.read()
         except FileNotFoundError:
             return []
-
-
         handle_load = cls.from_json_string(handle)
         my_list = []
         for object_dict in handle_load:
