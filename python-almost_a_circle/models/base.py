@@ -3,7 +3,7 @@
 
 import json
 import csv
-
+import turtle
 
 class Base:
     """A class with a private class attribute."""
@@ -115,3 +115,27 @@ class Base:
                 return ([cls.create(**objt) for objt in lst])
         except FileNotFoundError:
             return ([])
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """ Draw the rectangles and squares """
+
+        shapes = []
+        if list_rectangles:
+            shapes.extend(list_rectangles)
+        if list_squares:
+            shapes.extend(list_squares)
+        pen = turtle.Turtle()
+        pen.pen(pencolor='black', pendown=False, pensize=2, shown=False)
+        for shape in shapes:
+            pen.penup()
+            pen.setpos(shape.x, shape.y)
+            pen.pendown()
+            pen.forward(shape.width)
+            pen.right(90)
+            pen.forward(shape.height)
+            pen.right(90)
+            pen.forward(shape.width)
+            pen.right(90)
+            pen.forward(shape.height)
+            pen.right(90)
