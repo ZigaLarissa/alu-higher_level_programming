@@ -2,6 +2,7 @@
 """Create a new class."""
 
 import json
+import csv
 
 
 class Base:
@@ -75,3 +76,42 @@ class Base:
         for object_dict in handle_load:
             my_list.append(cls.create(**object_dict))
         return my_list
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ Serialize in a CSV file """
+        
+        filename = cls.__name__ + ".csv"
+
+        if filename == "Rectangle.csv":
+            fields = ["id", "width", "height", "x", "y"]
+        else:
+            fields = ["id", "size", "x", "y"]
+
+        with open(filename, mode="w", newline="") as my_File:
+            if list_objs is None:
+                writer = csv.writer(my_File)
+                writer.writerow([[]])
+            else:
+                writer = csv.DictWriter(my_File, fieldnames=fields)
+                writer.writeheader()
+                for x in list_objs:
+                    writer.writerow(x.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ Load from a CSV file """
+
+        try:
+            filename = cls.__name__ + ".csv"
+
+            with open(filename, mode="r", newline="") as my_File:
+                reader = csv.DictReader(my_File)
+                lst = []
+                for x in reader:
+                    for i, n in x.items():
+                        x[i] = int(n)
+                    lst.append(x)
+                return ([cls.create(**objt) for objt in lst])
+        except FileNotFoundError:
+            return ([])
