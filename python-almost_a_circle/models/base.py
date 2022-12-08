@@ -80,7 +80,7 @@ class Base:
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """ Serialize in a CSV file """
-        
+
         filename = cls.__name__ + ".csv"
 
         if filename == "Rectangle.csv":
