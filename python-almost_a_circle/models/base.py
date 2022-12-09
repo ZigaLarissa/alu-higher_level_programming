@@ -53,10 +53,10 @@ class Base:
     def create(cls, **dictionary):
         """Returns instance with all attr already set.by creating a dummy."""
 
-        if cls.__name__ == "Square":
-            dummy = cls(4)
         if cls.__name__ == "Rectangle":
-            dummy = cls(4, 2)
+            dummy = cls(3, 2)
+        if cls.__name__ == "Square":
+            dummy = cls(3)
         dummy.update(**dictionary)
         return dummy
 
