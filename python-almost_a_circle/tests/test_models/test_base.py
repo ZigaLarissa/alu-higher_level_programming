@@ -26,8 +26,8 @@ class TestBase(TestCase):
         """Test the converting of lists to dicts"""
 
         self.assertEqual(Base.to_json_string(None), "[]")
-        self.assertEqual(Base.to_json_string([{'id': 10}]), '[{"id": 10}]')
-        self.assertEqual(type(Base.to_json_string([{'id': 10}])), str)
+        self.assertEqual(Base.to_json_string([{'id': 12}]), '[{"id": 12}]')
+        self.assertEqual(type(Base.to_json_string([{'id': 12}])), str)
         self.assertEqual(Base.to_json_string([]), "[]")
 
     def test_save_to_file(self):
