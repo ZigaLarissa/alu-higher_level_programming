@@ -64,10 +64,11 @@ class TestBase(TestCase):
             self.assertEqual(my_file.read(), '[]')
             self.assertEqual(type(my_file.read()), str)
 
-        Rectangle.save_to_file([Rectangle(2, 4)])
+        Rectangle.save_to_file([Rectangle(2, 3)])
         with open("Rectangle.json") as my_file:
             self.assertEqual(my_file.read(),
-                             '[{"id": 1, "width": 2, "height": 4, "x": 0, "y": 0}]')
+                             '[{"id": 1, "width": 2, '
+                             '"height": 3, "x": 0, "y": 0}]')
 
     def test_from_json_string(self):
         """Test the converting of a file from JSON string representation."""
