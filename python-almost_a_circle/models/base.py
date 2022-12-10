@@ -5,6 +5,7 @@ import json
 import csv
 import turtle
 
+
 class Base:
     """A class with a private class attribute."""
     __nb_objects = 0
