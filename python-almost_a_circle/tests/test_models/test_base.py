@@ -47,10 +47,10 @@ class TestBase(TestCase):
             self.assertEqual(my_file.read(), '[]')
             self.assertEqual(type(my_file.read()), str)
 
-        Square.save_to_file([Square(2)])
+        Square.save_to_file([Square(4)])
         with open("Square.json") as my_file:
             self.assertEqual(my_file.read(),
-                             '[{"id": 1, "size": 2, "x": 0, "y": 0}]')
+                             '[{"id": 1, "size": 4, "x": 0, "y": 0}]')
         Base._Base__nb_objects = 0
 
         Rectangle.save_to_file(None)
@@ -66,7 +66,7 @@ class TestBase(TestCase):
 
 
     def test_from_json_string(self):
-        """Test the converting of a file from JSON string representation."""
+        """Test the converting of a file from a JSON string representation."""
 
         self.assertEqual(Base.from_json_string(None), [])
         self.assertEqual(Base.from_json_string('[{"id": 89}]'), [{'id': 89}])
